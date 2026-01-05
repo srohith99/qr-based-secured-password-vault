@@ -91,7 +91,7 @@ face-api.min.js
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/secured-vault-system.git
+   git clone https://github.com/srohith99/qr-based-secured-password-vault.git
 
 2. Configure database connection:
 
