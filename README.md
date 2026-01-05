@@ -101,5 +101,3 @@ setup:
 
 
 
-## 📂 Project Structure
-
