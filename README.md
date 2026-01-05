@@ -1,107 +1,105 @@
-# QR - Based Secured Password Vault System
+# QR-Based Secured Password Vault
 
-A **security-focused password vault** built to demonstrate real-world cybersecurity concepts such as encrypted storage, QR-based authentication, session hardening, and protection against shoulder surfing and unauthorized access.
+A **security-centric password vault** designed to demonstrate real-world cybersecurity practices such as **QR-based authentication, encrypted password storage, session hardening, anti-screenshot protection, location-based access tracking, and security monitoring**.
 
-This project goes beyond basic CRUD operations and focuses on **how modern password managers defend sensitive data**.
+This project focuses on **how modern password managers protect sensitive data**, not just basic CRUD functionality.
 
 ## Project Overview
 
-The Secured Vault System is a web-based application that allows users to securely store and manage passwords.  
-Instead of relying only on traditional credentials, the system introduces **QR-based authentication**, **time-limited password reveal**, and **active monitoring of risky user behavior**.
+The **QR-Based Secured Password Vault** is a web-based application that allows users to securely store and manage passwords using **multi-layer security controls**.
 
-The vault automatically locks itself when suspicious actions (screenshots, print attempts, abnormal behavior) are detected, ensuring enhanced session security.
+Instead of exposing passwords directly, the system enforces **secondary authentication (QR-based)**, **time-limited password reveal**, and **active monitoring of suspicious user actions**.  
+If risky behavior is detected (screenshots, snipping tools, tab switching, multiple faces, etc.), the vault **automatically locks itself**.
+
+The project is built as a **cybersecurity-focused academic project**, inspired by real-world password managers and Zero-Trust principles.
+
 
 ## Key Features
 
-### Authentication
+### Authentication & Access Control
 - QR-based login authentication
 - Mobile-assisted verification
-- Secure session initialization
+- Polling-based QR status validation
+- Secure session initialization and termination
 
 ### Password Management
 - Add encrypted password entries
-- Secure password deletion
+- Secure password reveal with secondary verification
+- Time-limited password visibility
+- Soft delete and restore support
+- Permanent deletion option
 - No plaintext password storage
 
-### Active Security Controls
-- Screenshot & snipping tool detection
-- PrintScreen and print-dialog protection
+### Active Security Protections
+- Screenshot & snipping-tool detection
+- PrintScreen and print-dialog blocking
+- Tab-switch and visibility change detection
 - Panic / emergency auto-lock
-- Session-based access control
+- Webcam-based detection hooks (face / presence)
 
-### Monitoring & Reporting
+### Monitoring & Transparency
 - Location-based last access tracking (with user permission)
-- Session summary and activity tracking
-- Timestamp handling in IST
+- Session summaries with IST timestamps
+- Security event logging
+- Downloadable session reports
 
 ### Security Utilities
 - Password strength analyzer
 - Breach checker for compromised credentials
-- Deleted password management
+- Security dashboard & logs
 
----
 
-## Security Concepts Implemented
+##  Security Concepts Implemented
 
 - Encryption at rest (AES-based)
-- Zero-Trust inspired authentication
-- Least privilege principle
-- Time-limited secret exposure
-- Session hardening
-- Shoulder surfing mitigation
+- Zero-Trust inspired access model
+- Least-privilege principle
+- Time-bound secret exposure
+- Session hardening & token invalidation
+- Shoulder-surfing mitigation
 - Privacy-aware location tracking
+- Defensive UI/UX design
 
-## Tech Stack
+## 🛠 Tech Stack
 
 - **Backend:** PHP  
 - **Database:** MongoDB  
 - **Frontend:** HTML, CSS, JavaScript  
-- **Face Detection / AI:** face-api.js  
-- **QR Authentication:** PHP + JS  
+- **AI / Detection:** face-api.js  
+- **QR Authentication:** PHP + JavaScript  
+- **Maps:** OpenStreetMap  
 - **Client Security:** Browser Security APIs  
-
-
-## 📂 Project Structure
-
-/assets
-add_password.php
-dashboard.php
-db_connect.php
-generate_qr.php
-get_descriptor.php
-index.php
-login.php
-logout.php
-register.php
-register_face.php
-save_descriptor.php
-verify_qr.php
-
-/css (stylesheets)
-
-/js
-antiCapture.js
-face-api.min.js
-
-/qrcodes (generated QR images)
 
 ---
 
 ## ⚙️ Setup Instructions
 
-1. Clone the repository:
+
+Clone the repository:
    ```bash
    git clone https://github.com/srohith99/qr-based-secured-password-vault.git
+```
 
-2. Configure database connection:
+setup:
+  database_and_environment:
+    - update_mongodb_credentials_in_configuration_files
+    - ensure_no_secrets_are_hard_coded_before_deployment
 
-    Update MongoDB credentials inside db_connect.php
+  dependencies:
+    - run: composer install
+      note: install_only_if_dependencies_are_required
 
-3. Place the project in a PHP-supported server:
+  server:
+    supported_servers:
+      - XAMPP
+      - WAMP
+      - LAMP
+      - hosted_environment
 
-    XAMPP / WAMP / LAMP / Live Server
+  access:
+    url: http://localhost/qr-based-secured-password-vault/
 
-4. Open in browser:
 
-    http://localhost/secured-vault-system/
+
+## 📂 Project Structure
 
