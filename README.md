@@ -1,4 +1,4 @@
-# Secured Vault System
+# QR - Based Secured Password Vault System
 
 A **security-focused password vault** built to demonstrate real-world cybersecurity concepts such as encrypted storage, QR-based authentication, session hardening, and protection against shoulder surfing and unauthorized access.
 
@@ -64,29 +64,28 @@ The vault automatically locks itself when suspicious actions (screenshots, print
 ## 📂 Project Structure
 
 /assets
-├── add_password.php
-├── dashboard.php
-├── db_connect.php
-├── generate_qr.php
-├── get_descriptor.php
-├── index.php
-├── login.php
-├── logout.php
-├── register.php
-├── register_face.php
-├── save_descriptor.php
-└── verify_qr.php
+├── add_password.php # Add new encrypted password
+├── dashboard.php # User vault dashboard
+├── db_connect.php # Database connection
+├── generate_qr.php # Generate QR for authentication / reveal
+├── get_descriptor.php # Fetch face descriptor
+├── index.php # Entry point
+├── login.php # User login
+├── logout.php # Logout and session cleanup
+├── register.php # User registration
+├── register_face.php # Face registration
+├── save_descriptor.php # Save face descriptor
+└── verify_qr.php # Verify QR authentication
 
 /css
-└── (stylesheets)
+└── stylesheets # Application styles
 
 /js
-├── antiCapture.js
-└── face-api.min.js
+├── antiCapture.js # Screenshot & snipping protection
+└── face-api.min.js # Face detection library
 
 /qrcodes
-└── (generated QR images)
-
+└── generated QR images # Temporary QR codes
 
 ---
 
